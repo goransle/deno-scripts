@@ -11,7 +11,8 @@ if (!requiredArgs.every(arg => parsedArgs[arg])) {
 
 const { path, sample } = parsedArgs;
 const commands = ['', 'nonav', 'embed'].map(sampleType => {
-    const relativeLocation = sample.replace('samples/', `samples/${sampleType}/`)
+    const relativeLocation = sample.replace('samples/', `samples/${sampleType}/`);
+
     return run({
         cmd: [
             'node',
@@ -22,8 +23,10 @@ const commands = ['', 'nonav', 'embed'].map(sampleType => {
             '-bucket',
             'assets.highcharts.com',
             '-output',
-            relativeLocation,
-            '-make-redirects'
+            join('demos', relativeLocation),
+            '-make-redirects',
+            '-AWSProfile',
+            'default'
         ],
         stdout: 'piped'
     });
