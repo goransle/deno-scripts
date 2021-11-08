@@ -9,8 +9,10 @@ if (!requiredArgs.every(arg => parsedArgs[arg])) {
     throw new Error('Missing one or more of required arguments: '+ requiredArgs.toString());
 }
 
+const variants: string[] = parsedArgs.variants.split(',') || ['', 'nonav', 'embed'];
+
 const { path, sample } = parsedArgs;
-const commands = ['', 'nonav', 'embed'].map(sampleType => {
+const commands = variants.map(sampleType => {
     const relativeLocation = sample.replace('samples/', `samples/${sampleType}/`);
 
     return run({
