@@ -12,23 +12,26 @@ if (!requiredArgs.every((arg) => parsedArgs[arg])) {
   );
 }
 
-const variants: string[] = parsedArgs.variants.split(",") ||
-  ["", "nonav", "embed"];
+const variants: string[] = parsedArgs.variants
+  ? parsedArgs.variants.split(",")
+  : ["", "nonav", "embed"];
 
 const { path, sample } = parsedArgs;
 const commands = variants.map(async (sampleType) => {
-  const relativeLocation = sample.replace("samples/", `samples/${sampleType}/`);
+  const relativeLocation = (sampleType.length
+    ? `samples/${sampleType}/`
+    : "samples/") + sample;
   console.log(relativeLocation);
-  const output = join("demos/samples/", relativeLocation);
+  const output = join("demos/", relativeLocation);
 
   console.log(output);
-
+  
   const stdout = await run([
     "node",
     "./bin/cli.js",
     "demo-deploy",
     "-input",
-    join(path, relativeLocation),
+    join(path.replace('samples/', ''), relativeLocation),
     "-bucket",
     "assets.highcharts.com",
     "-output",
