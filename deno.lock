@@ -1,0 +1,15 @@
+{
+  "version": "2",
+  "remote": {
+    "https://deno.land/std@0.152.0/_util/assert.ts": "e94f2eb37cebd7f199952e242c77654e43333c1ac4c5c700e929ea3aa5489f74",
+    "https://deno.land/std@0.152.0/flags/mod.ts": "34bb4148ad1cbdf1e3d20e1541f36c8a5b47205e3a5ee4e62a71eab89215011b",
+    "https://deno.land/std@0.152.0/path/_constants.ts": "df1db3ffa6dd6d1252cc9617e5d72165cd2483df90e93833e13580687b6083c3",
+    "https://deno.land/std@0.152.0/path/_interface.ts": "ee3b431a336b80cf445441109d089b70d87d5e248f4f90ff906820889ecf8d09",
+    "https://deno.land/std@0.152.0/path/_util.ts": "c1e9686d0164e29f7d880b2158971d805b6e0efc3110d0b3e24e4b8af2190d2b",
+    "https://deno.land/std@0.152.0/path/posix.ts": "c1f7afe274290ea0b51da07ee205653b2964bd74909a82deb07b69a6cc383aaa",
+    "https://deno.land/x/run_simple@1.1.0/mod.ts": "107de176c82574d128164e31ad7811a03ef85d67919061eed3b8f3bcecec1885",
+    "https://deno.land/x/run_simple@1.1.0/src/fn.ts": "81dd8fc48e3ad1e82808ce52bc74153f4dd4a522f0982687ec4d1b9d3936f2f3",
+    "https://deno.land/x/run_simple@1.1.0/src/os.ts": "58dd739ee0e24cb9d9f9e89aef37b3aaa872bfbf983eac142969840db6babec5",
+    "https://deno.land/x/run_simple@1.1.0/src/run.ts": "a6f8d6def231711aa528238971ccbd67641eb264a85d4c5d9642a03863866dde"
+  }
+}
