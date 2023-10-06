@@ -7,14 +7,18 @@ for await (const line of readLines(Deno.stdin)) {
       console.log('Pretending to upload ' + line);
     }
     else {
+      if(Deno.args.includes('--dryrun')){
+        console.log('Pretending to upload ' + line);
+      }
+      else {
+        console.log(line)
+        const cmd = `upload-single-sample --path tmp/samples/ --sample ${line.replace(/^samples\//, '')}`;
 
-      console.log(line)
-      const cmd = `upload-single-sample --path tmp/samples/ --sample ${line.replace(/^samples\//, '')}`;
+          const stdout = await run(cmd)
+        .catch(error => console.error(error));
 
-      const stdout = await run(cmd)
-      .catch(error => console.error(error));
-
-      console.log(stdout);
+        console.log(stdout);
+      }
     }
   }
 }
