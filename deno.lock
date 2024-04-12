@@ -1,7 +1,10 @@
 {
   "version": "3",
   "redirects": {
-    "https://deno.land/x/deno_dom/deno-dom-wasm.ts": "https://deno.land/x/deno_dom@v0.1.38/deno-dom-wasm.ts"
+    "https://deno.land/std/flags/mod.ts": "https://deno.land/std@0.152.0/flags/mod.ts",
+    "https://deno.land/std/path/posix.ts": "https://deno.land/std@0.152.0/path/posix.ts",
+    "https://deno.land/x/deno_dom/deno-dom-wasm.ts": "https://deno.land/x/deno_dom@v0.1.38/deno-dom-wasm.ts",
+    "https://deno.land/x/run_simple/mod.ts": "https://deno.land/x/run_simple@1.1.0/mod.ts"
   },
   "remote": {
     "https://deno.land/std@0.152.0/_util/assert.ts": "e94f2eb37cebd7f199952e242c77654e43333c1ac4c5c700e929ea3aa5489f74",

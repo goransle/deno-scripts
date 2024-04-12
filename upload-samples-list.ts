@@ -3,6 +3,7 @@ import { run } from "https://deno.land/x/run_simple/mod.ts";
 
 for await (const line of readLines(Deno.stdin)) {
   if(line.length){
+    console.log(line)
     if(Deno.args.includes('--dryrun')){
       console.log('Pretending to upload ' + line);
     }
